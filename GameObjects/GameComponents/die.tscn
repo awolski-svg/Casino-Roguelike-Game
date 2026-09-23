@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://053beucxau0m"]
+
+[ext_resource type="Script" uid="uid://bjwcfxawoiqrv" path="res://Scripts/GameComponents/die.gd" id="1_10mv1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6dapk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6dapk"]
+size = Vector2(114, 116)
+
+[node name="Die" type="Area2D" unique_id=2106056928]
+script = ExtResource("1_10mv1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=742014623]
+sprite_frames = SubResource("SpriteFrames_6dapk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1332223207]
+position = Vector2(47, 48)
+shape = SubResource("RectangleShape2D_6dapk")
