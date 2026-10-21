@@ -1,18 +1,76 @@
 [gd_scene format=3 uid="uid://053beucxau0m"]
 
 [ext_resource type="Script" uid="uid://bjwcfxawoiqrv" path="res://Scripts/GameComponents/die.gd" id="1_10mv1"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_6dapk"]
+[ext_resource type="Texture2D" uid="uid://mvn4w1t150cs" path="res://Sprites/Rolling.png" id="2_jjy2g"]
+[ext_resource type="Texture2D" uid="uid://2wtsxeyaviqi" path="res://Sprites/1-9 Dice.png" id="2_r8ogx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6dapk"]
-size = Vector2(114, 116)
+size = Vector2(160, 155.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opxwh"]
+atlas = ExtResource("2_jjy2g")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xf35"]
+atlas = ExtResource("2_jjy2g")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xw540"]
+atlas = ExtResource("2_jjy2g")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogmof"]
+atlas = ExtResource("2_jjy2g")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hearl"]
+atlas = ExtResource("2_jjy2g")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yf2o2"]
+atlas = ExtResource("2_jjy2g")
+region = Rect2(1600, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2usvv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opxwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xf35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xw540")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ogmof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hearl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yf2o2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 24.0
+}]
 
 [node name="Die" type="Area2D" unique_id=2106056928]
 script = ExtResource("1_10mv1")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=742014623]
-sprite_frames = SubResource("SpriteFrames_6dapk")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1332223207]
-position = Vector2(47, 48)
+[node name="CollisionShape2D_Dice" type="CollisionShape2D" parent="." unique_id=1332223207]
 shape = SubResource("RectangleShape2D_6dapk")
+
+[node name="AnimatedSprite2D_Dice" type="AnimatedSprite2D" parent="." unique_id=742014623]
+z_index = 1
+position = Vector2(1, 0)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_2usvv")
+frame_progress = 0.5001057
+
+[node name="Sprite2D_Dice" type="Sprite2D" parent="." unique_id=2065119724]
+position = Vector2(1, 0)
+texture = ExtResource("2_r8ogx")
+hframes = 9
