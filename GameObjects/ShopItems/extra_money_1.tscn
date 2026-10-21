@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bfc5ranmvbo1"]
+
+[ext_resource type="Script" uid="uid://b4pbo7bic34ew" path="res://Scripts/Shop_Item.gd" id="1_1osmj"]
+
+[node name="ExtraMoney1" type="Node" unique_id=1927439007]
+script = ExtResource("1_1osmj")
+cost = 20
+Rarity = 5
+Name = "ExtraMoney1"
+metadata/_custom_type_script = "uid://b4pbo7bic34ew"

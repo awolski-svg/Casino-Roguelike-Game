@@ -17,15 +17,15 @@ func load_game() -> void:
 # the game was won
 func Win() -> void:
 	pass
-	
+
 # the game was lost
 func Lose() -> void:
 	pass
-	
+
 # do player's next turn
 func Player_Turn() -> void:
 	pass
-	
+
 # do the AI's turn 
 func AI_Turn() -> void:
 	pass

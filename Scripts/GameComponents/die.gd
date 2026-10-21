@@ -1,29 +1,36 @@
 extends Area2D
 
 var rng = RandomNumberGenerator.new()
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@export var sides = 6
+var rolling = false
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-func _Roll_get_value(sides:int):
-	rng.randi_range(0,sides)
+func _Roll_get_value(num):
+	return rng.randi_range(0,num)
 	
 func Roll() -> int:
+	if(rolling):
+		return -1
+	rolling = true	
 	var value
 	value = _Roll_get_value(6)
 	
 	# do animation stuff
+	$AnimatedSprite2D.play("Rolling")
+	print("rolling")
+	await get_tree().create_timer(2.0).timeout
+	print("rolled")
+	
+	$AnimatedSprite2D.play("Rolled_"+str(value))
 	
 	# set final part of roll to number
 	
 	# everything else before roll is 'finished'
-	
+	rolling = false
 	return value
+
+func Rolled(rolledNum) -> void:
+	$AnimatedSprite2D.play("Rolled_" + rolledNum)
+	pass
 
 # player picks up die (to roll?)
 func Pickup() -> void:

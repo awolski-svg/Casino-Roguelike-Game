@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dlgp0w3w14uyv"]
+
+[ext_resource type="Script" uid="uid://bnaikgcn7idcp" path="res://Scripts/Command_Center.gd" id="1_71w2o"]
+
+[node name="CommandCenter" type="Node" unique_id=934556935]
+script = ExtResource("1_71w2o")
