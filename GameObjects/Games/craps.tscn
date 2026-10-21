@@ -1,6 +1,60 @@
 [gd_scene format=3 uid="uid://na6wugnfmmd1"]
 
 [ext_resource type="Script" uid="uid://bjk5jahtepqba" path="res://Scripts/Games/craps.gd" id="1_q66nv"]
+[ext_resource type="PackedScene" uid="uid://053beucxau0m" path="res://GameObjects/GameComponents/die.tscn" id="2_x0hg3"]
 
 [node name="Craps" type="Node" unique_id=1734497082]
 script = ExtResource("1_q66nv")
+
+[node name="Die" parent="." unique_id=2106056928 instance=ExtResource("2_x0hg3")]
+position = Vector2(860, 220)
+
+[node name="Die2" parent="." unique_id=1134085560 instance=ExtResource("2_x0hg3")]
+position = Vector2(370, 220)
+
+[node name="NMIXX" type="Button" parent="." unique_id=28307993]
+offset_left = 379.0
+offset_top = 413.0
+offset_right = 780.0
+offset_bottom = 598.0
+text = "Roll Dice"
+
+[node name="Label" type="Label" parent="." unique_id=652027119]
+offset_left = 476.0
+offset_top = 10.0
+offset_right = 695.0
+offset_bottom = 150.0
+
+[node name="Bet-Up" type="Button" parent="." unique_id=966824660]
+custom_maximum_size = Vector2(100, 50)
+offset_left = 70.0
+offset_top = 264.0
+offset_right = 170.0
+offset_bottom = 314.0
+text = "Bet Up"
+
+[node name="Bet-Down" type="Button" parent="." unique_id=1604751737]
+custom_maximum_size = Vector2(100, 50)
+offset_left = 70.0
+offset_top = 360.0
+offset_right = 170.0
+offset_bottom = 410.0
+text = "Bet Down"
+
+[node name="Bet Label" type="Label" parent="." unique_id=919176029]
+anchors_preset = -1
+anchor_right = 0.12900001
+anchor_bottom = 0.09
+offset_left = 49.0
+offset_top = 325.0
+offset_right = 49.392
+offset_bottom = 324.68
+text = "Bet Amount: "
+
+[connection signal="Done" from="Die" to="." method="_on_die_done"]
+[connection signal="Done" from="Die2" to="." method="_on_die_done"]
+[connection signal="pressed" from="NMIXX" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="NMIXX" to="Die" method="_on_button_pressed"]
+[connection signal="pressed" from="NMIXX" to="Die2" method="_on_button_pressed"]
+[connection signal="pressed" from="Bet-Up" to="." method="_on_bet_up_pressed"]
+[connection signal="pressed" from="Bet-Down" to="." method="_on_bet_down_pressed"]

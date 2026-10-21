@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Casino Roguelike"
+run/main_scene="uid://na6wugnfmmd1"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
