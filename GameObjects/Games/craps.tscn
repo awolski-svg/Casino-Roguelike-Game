@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bjk5jahtepqba" path="res://Scripts/Games/craps.gd" id="1_q66nv"]
 [ext_resource type="PackedScene" uid="uid://053beucxau0m" path="res://GameObjects/GameComponents/die.tscn" id="2_x0hg3"]
 
-[node name="Craps" type="Node" unique_id=1734497082]
+[node name="Craps" type="Node2D" unique_id=836057742]
 script = ExtResource("1_q66nv")
 
 [node name="Die" parent="." unique_id=2106056928 instance=ExtResource("2_x0hg3")]
@@ -55,7 +55,6 @@ text = "Bet Amount: "
 
 [connection signal="Done" from="Die" to="." method="_on_die_done"]
 [connection signal="Done" from="Die2" to="." method="_on_die_done"]
-[connection signal="pressed" from="NMIXX" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="NMIXX" to="Die" method="_on_button_pressed"]
 [connection signal="pressed" from="NMIXX" to="Die2" method="_on_button_pressed"]
 [connection signal="pressed" from="Bet-Up" to="." method="_on_bet_up_pressed"]

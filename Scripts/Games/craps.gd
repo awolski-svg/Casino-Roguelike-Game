@@ -14,7 +14,7 @@ var Bet = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -27,6 +27,7 @@ func _process(delta: float) -> void:
 		Point = " + str(Point)
 		
 		pass
+	
 
 
 func RollType(roll:int):
@@ -70,6 +71,7 @@ func Point_Phase_Roll(roll:int):
 		Loss()
 
 	pass
+	
 func Passwin():
 
 	Money = round(Money + Bet + Bet)

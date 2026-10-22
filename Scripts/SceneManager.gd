@@ -4,7 +4,8 @@ extends Node
 
 @onready var sceneList:Array[Scene] = [
 	$"../Main",
-	$"../ShopScene"
+	$"../ShopScene",
+	$"../Gambling"
 ]
 @onready var current_scene = $"../Main" # set start here
 

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://053beucxau0m" path="res://GameObjects/GameComponents/die.tscn" id="3_7lvgw"]
 [ext_resource type="PackedScene" uid="uid://dqkf77r0qki56" path="res://GameObjects/Scenes/shop_scene.tscn" id="3_a1j86"]
 [ext_resource type="PackedScene" uid="uid://dk82e7klv4gay" path="res://GameObjects/Scenes/scene_manager.tscn" id="4_7lvgw"]
+[ext_resource type="PackedScene" uid="uid://c01b6fsuarr0e" path="res://GameObjects/Scenes/gambling.tscn" id="5_7lvgw"]
 [ext_resource type="PackedScene" uid="uid://dlgp0w3w14uyv" path="res://GameObjects/DataComponents/command_center.tscn" id="5_wf47j"]
 
 [node name="GameManager" type="Node2D" unique_id=1055148038]
@@ -16,6 +17,10 @@ die_scene = ExtResource("3_7lvgw")
 [node name="ShopScene" parent="." unique_id=408465217 instance=ExtResource("3_a1j86")]
 visible = false
 
+[node name="Gambling" parent="." unique_id=722668123 instance=ExtResource("5_7lvgw")]
+visible = false
+SceneType = "Gamble"
+
 [node name="SceneManager" parent="." unique_id=1192324824 instance=ExtResource("4_7lvgw")]
 
 [node name="CommandCenter" parent="." unique_id=934556935 node_paths=PackedStringArray("SceneManager") instance=ExtResource("5_wf47j")]
@@ -23,3 +28,4 @@ SceneManager = NodePath("../SceneManager")
 
 [connection signal="SceneChange" from="Main" to="CommandCenter" method="ChangeScene"]
 [connection signal="SceneChange" from="ShopScene" to="CommandCenter" method="ChangeScene"]
+[connection signal="SceneChange" from="Gambling" to="CommandCenter" method="ChangeScene"]

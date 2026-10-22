@@ -1,13 +1,29 @@
 [gd_scene format=3 uid="uid://dosbjx8y7vnlt"]
 
 [ext_resource type="Script" uid="uid://bbiyjo2abn3wg" path="res://Scripts/Main.gd" id="1_n1prj"]
+[ext_resource type="Texture2D" uid="uid://cfe3bqtjtflyn" path="res://TempAssets/v2/preview.png" id="2_qpusw"]
 [ext_resource type="Texture2D" uid="uid://bj1k3286361gw" path="res://TempAssets/backgrounds/_07_huge_clouds.png" id="2_roxiv"]
+[ext_resource type="Texture2D" uid="uid://bmei2uwin4ycb" path="res://TempAssets/backgrounds/_11_background.png" id="4_nclmi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n1prj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qpusw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6dapk"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_roxiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nclmi")
 }],
 "loop": 1,
 "name": &"default",
@@ -20,17 +36,41 @@ anchors_preset = 0
 script = ExtResource("1_n1prj")
 SceneType = "Main"
 
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=924076129]
+position = Vector2(642.5, 349.5)
+scale = Vector2(4.7095585, 4.3312497)
+sprite_frames = SubResource("SpriteFrames_n1prj")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1591333322]
 position = Vector2(621.00006, 289.00003)
 scale = Vector2(0.64404297, 0.52587324)
 sprite_frames = SubResource("SpriteFrames_6dapk")
 
-[node name="Button" type="Button" parent="." unique_id=155978638]
+[node name="Play" type="Button" parent="." unique_id=155978638]
 layout_mode = 0
-offset_left = 472.0
-offset_top = 278.0
-offset_right = 694.0
-offset_bottom = 363.0
-text = "Press me"
+offset_left = 521.0
+offset_top = 409.0
+offset_right = 743.0
+offset_bottom = 494.0
+text = "Play"
 
-[connection signal="button_down" from="Button" to="." method="ChangeScene" binds= ["Shop"]]
+[node name="Quit" type="Button" parent="." unique_id=1496849460]
+layout_mode = 0
+offset_left = 521.0
+offset_top = 513.0
+offset_right = 743.0
+offset_bottom = 598.0
+text = "Quit"
+
+[node name="Title" type="Label" parent="." unique_id=663953229]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 237.0
+offset_right = 1270.0
+offset_bottom = 420.0
+theme_override_colors/font_color = Color(0.3372549, 0.2901961, 0.52156866, 1)
+theme_override_font_sizes/font_size = 105
+text = "Pair of Dice to Paradice"
+
+[connection signal="button_down" from="Play" to="." method="ChangeScene" binds= ["Gamble"]]
+[connection signal="button_down" from="Quit" to="." method="ChangeScene" binds= ["Gamble"]]

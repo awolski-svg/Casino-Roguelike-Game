@@ -33,4 +33,4 @@ offset_right = 1131.0
 offset_bottom = 629.0
 text = "Back To Main"
 
-[connection signal="button_down" from="Back_To_Main" to="." method="ChangeScene" binds= ["Main"]]
+[connection signal="button_down" from="Back_To_Main" to="." method="ChangeScene" binds= ["Gamble"]]
