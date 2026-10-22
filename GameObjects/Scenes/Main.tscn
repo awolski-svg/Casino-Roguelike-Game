@@ -44,7 +44,7 @@ sprite_frames = SubResource("SpriteFrames_n1prj")
 position = Vector2(621.00006, 289.00003)
 scale = Vector2(0.64404297, 0.52587324)
 sprite_frames = SubResource("SpriteFrames_6dapk")
-frame_progress = 0.3155254
+frame_progress = 0.00669462
 
 [node name="Play" type="Button" parent="." unique_id=155978638]
 layout_mode = 0
@@ -73,4 +73,4 @@ theme_override_font_sizes/font_size = 105
 text = "Pair of Dice to Paradice"
 
 [connection signal="button_down" from="Play" to="." method="ChangeScene" binds= ["Gamble"]]
-[connection signal="button_down" from="Quit" to="." method="ChangeScene" binds= ["Gamble"]]
+[connection signal="button_down" from="Quit" to="." method="quit_game"]
