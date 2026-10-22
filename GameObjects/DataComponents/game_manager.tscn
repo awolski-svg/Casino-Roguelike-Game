@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bimk7b5owvyre"]
 
 [ext_resource type="Script" uid="uid://c1xqsodnexhdn" path="res://Scripts/game_manager.gd" id="1_rqn26"]
-[ext_resource type="PackedScene" uid="uid://dosbjx8y7vnlt" path="res://GameObjects/Main.tscn" id="2_82tqi"]
+[ext_resource type="PackedScene" uid="uid://dosbjx8y7vnlt" path="res://GameObjects/Scenes/Main.tscn" id="2_82tqi"]
 [ext_resource type="PackedScene" uid="uid://053beucxau0m" path="res://GameObjects/GameComponents/die.tscn" id="3_7lvgw"]
-[ext_resource type="PackedScene" uid="uid://dqkf77r0qki56" path="res://GameObjects/DataComponents/shop_scene.tscn" id="3_a1j86"]
-[ext_resource type="PackedScene" uid="uid://dk82e7klv4gay" path="res://GameObjects/DataComponents/scene_manager.tscn" id="4_7lvgw"]
+[ext_resource type="PackedScene" uid="uid://dqkf77r0qki56" path="res://GameObjects/Scenes/shop_scene.tscn" id="3_a1j86"]
+[ext_resource type="PackedScene" uid="uid://dk82e7klv4gay" path="res://GameObjects/Scenes/scene_manager.tscn" id="4_7lvgw"]
 [ext_resource type="PackedScene" uid="uid://dlgp0w3w14uyv" path="res://GameObjects/DataComponents/command_center.tscn" id="5_wf47j"]
 
 [node name="GameManager" type="Node2D" unique_id=1055148038]
