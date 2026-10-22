@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://dqkf77r0qki56"]
 
 [ext_resource type="Script" uid="uid://ikps6vblmejm" path="res://Scripts/Shop.gd" id="1_xnkbb"]
+[ext_resource type="Texture2D" uid="uid://dcjudeekxp64l" path="res://Sprites/pixil-frame-0 (7).png" id="2_20plw"]
 [ext_resource type="Texture2D" uid="uid://mb2r5uej2g6y" path="res://TempAssets/backgrounds/_05_hill1.png" id="2_67023"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6dapk"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_20plw")
+}, {
 "duration": 1.0,
 "texture": ExtResource("2_67023")
 }],
@@ -21,16 +25,16 @@ script = ExtResource("1_xnkbb")
 SceneType = "Shop"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1961220906]
-position = Vector2(560.49994, 153)
-scale = Vector2(0.6557618, 0.6300129)
+position = Vector2(640, 359.49997)
+scale = Vector2(9.984375, 11.234374)
 sprite_frames = SubResource("SpriteFrames_6dapk")
 
 [node name="Back_To_Main" type="Button" parent="." unique_id=1861820301]
 layout_mode = 0
-offset_left = 772.0
-offset_top = 496.0
-offset_right = 1131.0
-offset_bottom = 629.0
+offset_left = 466.0
+offset_top = 314.0
+offset_right = 825.0
+offset_bottom = 447.0
 text = "Back To Main"
 
 [connection signal="button_down" from="Back_To_Main" to="." method="ChangeScene" binds= ["Gamble"]]
